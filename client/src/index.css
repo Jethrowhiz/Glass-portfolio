@@ -59,6 +59,15 @@
     text-shadow: 0 0 20px rgba(255, 0, 255, 0.5);
   }
 
+  .text-glow-white {
+    text-shadow: 0 0 20px rgba(255, 255, 255, 0.8);
+  }
+
+  .border-glow-white {
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.5), inset 0 0 10px rgba(255, 255, 255, 0.2);
+    border-color: rgba(255, 255, 255, 0.8);
+  }
+
   .neon-border {
     box-shadow: 0 0 10px rgba(0, 243, 255, 0.2), inset 0 0 10px rgba(0, 243, 255, 0.1);
   }
