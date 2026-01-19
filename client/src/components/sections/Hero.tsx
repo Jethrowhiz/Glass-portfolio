@@ -70,11 +70,10 @@ export function Hero() {
             
             {/* Center Image/Card */}
             <div className="absolute inset-0 flex items-center justify-center">
-              <div className="relative w-64 h-64 rounded-full overflow-hidden border-2 border-white/10 glass shadow-[0_0_50px_rgba(0,243,255,0.2)]">
-                {/* Developer Avatar - using a nice abstract 3D render placeholder */}
-                {/* abstract 3d neon avatar portrait cyberpunk style */}
+              <div className="relative w-64 h-64 rounded-full overflow-hidden border-2 glass border-glow-white shadow-[0_0_50px_rgba(255,255,255,0.2)]">
+                {/* Developer Avatar */}
                 <img 
-                  src="https://images.unsplash.com/photo-1633356122544-f134324a6cee?w=800&auto=format&fit=crop&q=60" 
+                  src="/assets/profile.jpg" 
                   alt="Developer"
                   className="w-full h-full object-cover"
                 />
