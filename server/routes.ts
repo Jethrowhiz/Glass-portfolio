@@ -78,8 +78,8 @@ async function seedDatabase() {
       { name: "Clarity", category: "blockchain", proficiency: 75, icon: "SiStacks" },
       { name: "Figma", category: "design", proficiency: 85, icon: "SiFigma" },
       { name: "Git", category: "tools", proficiency: 90, icon: "SiGit" },
+      { name: "GitHub", category: "tools", proficiency: 95, icon: "SiGithub" },
       { name: "VS Code", category: "tools", proficiency: 95, icon: "SiVisualstudiocode" },
-      { name: "Firebase", category: "tools", proficiency: 80, icon: "SiFirebase" },
     ];
     
     for (const skill of skillList) {
