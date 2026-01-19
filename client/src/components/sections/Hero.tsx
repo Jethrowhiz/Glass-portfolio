@@ -45,13 +45,19 @@ export function Hero() {
             </NeonButton>
             
             <div className="flex items-center gap-4 px-6">
-              {[Github, Linkedin, Twitter].map((Icon, i) => (
+              {[
+                { Icon: Github, href: "https://github.com/Jethrowhiz" },
+                { Icon: Linkedin, href: "#" },
+                { Icon: Twitter, href: "#" }
+              ].map((social, i) => (
                 <a 
                   key={i} 
-                  href="#" 
+                  href={social.href} 
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="p-2 rounded-full border border-white/10 hover:border-cyan-500/50 hover:bg-cyan-500/10 hover:text-cyan-400 transition-all text-muted-foreground"
                 >
-                  <Icon className="w-5 h-5" />
+                  <social.Icon className="w-5 h-5" />
                 </a>
               ))}
             </div>

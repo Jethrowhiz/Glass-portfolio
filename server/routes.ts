@@ -10,29 +10,29 @@ async function seedDatabase() {
   if (existingProjects.length === 0) {
     // Seed Projects
     await storage.createProject({
-      title: "Neon Commerce",
-      description: "A futuristic e-commerce platform built with Next.js and Stripe, featuring real-time inventory and 3D product previews.",
+      title: "Portfolio Website",
+      description: "A responsive portfolio website showcasing projects and skills with smooth animations and modern design principles.",
       imageUrl: "https://images.unsplash.com/photo-1557821552-17105176677c?w=800&q=80",
-      link: "https://github.com",
-      tags: ["Next.js", "React", "Stripe", "Tailwind"],
+      link: "https://github.com/Jethrowhiz/portfolio-website",
+      tags: ["React", "Tailwind", "Framer Motion"],
       featured: true,
     });
     
     await storage.createProject({
-      title: "Glass UI Kit",
-      description: "An open-source React component library focusing on glassmorphism and frosted glass effects.",
+      title: "My Portfolio (HTML)",
+      description: "A classic portfolio design implemented using semantic HTML and CSS to demonstrate core web development skills.",
       imageUrl: "https://images.unsplash.com/photo-1550745165-9bc0b252726f?w=800&q=80",
-      link: "https://github.com",
-      tags: ["React", "CSS Modules", "Storybook"],
+      link: "https://github.com/Jethrowhiz/My_portfolio",
+      tags: ["HTML", "CSS"],
       featured: true,
     });
     
     await storage.createProject({
-      title: "Cyber Dashboard",
-      description: "Real-time analytics dashboard for IoT devices with glowing data visualization charts.",
+      title: "Clarity Smart Contracts",
+      description: "Assignment repository for Clarity smart contracts, focusing on blockchain development and secure contract logic.",
       imageUrl: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&q=80",
-      link: "https://github.com",
-      tags: ["Vue.js", "D3.js", "WebSockets"],
+      link: "https://github.com/Jethrowhiz/Clarity-Smart-Contract-Assignments",
+      tags: ["Clarity", "Smart Contracts", "Blockchain"],
       featured: false,
     });
   }
