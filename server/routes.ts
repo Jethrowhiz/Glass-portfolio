@@ -57,7 +57,7 @@ async function seedDatabase() {
     await storage.createProject({
       title: "Weather Dashboard",
       description: "A dynamic weather application providing real-time forecasts and interactive climate data visualizations.",
-      imageUrl: "https://images.unsplash.com/photo-1592210454359-9043f067919b?w=800&q=80",
+      imageUrl: "/assets/weather-dashboard.webp",
       link: "https://github.com/Jethrowhiz",
       tags: ["JavaScript", "API Integration", "Charts.js"],
       featured: false,
