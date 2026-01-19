@@ -48,7 +48,7 @@ export function Hero() {
               {[
                 { Icon: Github, href: "https://github.com/Jethrowhiz" },
                 { Icon: Linkedin, href: "#" },
-                { Icon: Twitter, href: "#" }
+                { Icon: Twitter, href: "https://x.com/LilwhizSJ" }
               ].map((social, i) => (
                 <a 
                   key={i} 
