@@ -30,7 +30,7 @@ async function seedDatabase() {
     await storage.createProject({
       title: "Clarity Smart Contracts",
       description: "Assignment repository for Clarity smart contracts, focusing on blockchain development and secure contract logic.",
-      imageUrl: "https://images.unsplash.com/photo-1639762681485-074b7f938ba0?w=800&q=80",
+      imageUrl: "/assets/smart-contracts.jpg",
       link: "https://github.com/Jethrowhiz/Clarity-Smart-Contract-Assignments",
       tags: ["Clarity", "Smart Contracts", "Blockchain"],
       featured: false,
