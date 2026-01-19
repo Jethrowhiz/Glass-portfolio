@@ -45,6 +45,7 @@ export function Projects() {
                   <img 
                     src={project.imageUrl} 
                     alt={project.title}
+                    loading="lazy"
                     className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700 ease-out"
                   />
                   <div className="absolute top-4 right-4 z-20">
