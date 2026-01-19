@@ -48,7 +48,7 @@ async function seedDatabase() {
     await storage.createProject({
       title: "Task Management Tool",
       description: "A collaborative task tracking application with real-time updates and team management features.",
-      imageUrl: "https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?w=800&q=80",
+      imageUrl: "/assets/task-manager.webp",
       link: "https://github.com/Jethrowhiz",
       tags: ["React", "Firebase", "Tailwind"],
       featured: false,
