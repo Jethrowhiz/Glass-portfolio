@@ -24,27 +24,27 @@ export function Hero() {
             </span>
           </div>
           
-          <h1 className="text-5xl md:text-7xl font-display font-bold leading-tight mb-6">
+          <h1 className="text-4xl sm:text-5xl md:text-7xl font-display font-bold leading-tight mb-6">
             Building the <br />
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500 text-glow">
               Future Web
             </span>
           </h1>
-          <h2 className="text-2xl md:text-3xl font-display font-semibold mb-6 text-white">
+          <h2 className="text-xl sm:text-2xl md:text-3xl font-display font-semibold mb-6 text-white">
             I'm <span className="text-glow-white">Jethro Samson</span>
           </h2>
           
-          <p className="text-lg text-muted-foreground mb-8 max-w-xl leading-relaxed">
+          <p className="text-base sm:text-lg text-muted-foreground mb-8 max-w-xl leading-relaxed">
             I craft immersive, high-performance digital experiences using modern technologies. 
             Specializing in React, Node.js, and creative frontend engineering.
           </p>
           
-          <div className="flex flex-wrap gap-4 mb-12">
-            <NeonButton onClick={scrollToProjects}>
+          <div className="flex flex-col sm:flex-row gap-4 mb-12 items-center sm:items-start">
+            <NeonButton onClick={scrollToProjects} className="w-full sm:w-auto">
               View Projects <ArrowRight className="w-4 h-4" />
             </NeonButton>
             
-            <div className="flex items-center gap-4 px-6">
+            <div className="flex items-center gap-4 px-0 sm:px-6">
               {[
                 { Icon: Github, href: "https://github.com/Jethrowhiz" },
                 { Icon: MessageCircle, href: "https://wa.me/2349124294337" },

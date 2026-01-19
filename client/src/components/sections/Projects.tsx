@@ -32,7 +32,7 @@ export function Projects() {
           </button>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
           {projects?.map((project, idx) => (
             <Link key={project.id} href={`/project/${project.id}`} className="block h-full">
               <GlassCard 
