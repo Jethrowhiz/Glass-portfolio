@@ -37,11 +37,11 @@ async function seedDatabase() {
     });
 
     await storage.createProject({
-      title: "E-Commerce App",
-      description: "A full-stack e-commerce solution with product management, shopping cart, and secure checkout integration.",
-      imageUrl: "https://images.unsplash.com/photo-1557821552-17105176677c?w=800&q=80",
+      title: "Web3 Smart Contract App",
+      description: "A decentralized application featuring secure smart contract interactions, real-time blockchain data monitoring, and wallet integration.",
+      imageUrl: "https://images.unsplash.com/photo-1639762681057-32c9a2d57a44?w=800&q=80",
       link: "https://github.com/Jethrowhiz",
-      tags: ["Node.js", "Express", "PostgreSQL"],
+      tags: ["Solidity", "Ether.js", "Web3", "React"],
       featured: true,
     });
 
