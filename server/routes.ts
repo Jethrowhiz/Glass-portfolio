@@ -73,8 +73,13 @@ async function seedDatabase() {
       { name: "Tailwind CSS", category: "frontend", proficiency: 95, icon: "SiTailwindcss" },
       { name: "Node.js", category: "backend", proficiency: 85, icon: "SiNodedotjs" },
       { name: "PostgreSQL", category: "backend", proficiency: 80, icon: "SiPostgresql" },
-      { name: "Figma", category: "tools", proficiency: 85, icon: "SiFigma" },
+      { name: "Solidity", category: "blockchain", proficiency: 85, icon: "SiSolidity" },
+      { name: "Ether.js", category: "blockchain", proficiency: 80, icon: "SiEthereum" },
+      { name: "Clarity", category: "blockchain", proficiency: 75, icon: "SiStacks" },
+      { name: "Figma", category: "design", proficiency: 85, icon: "SiFigma" },
       { name: "Git", category: "tools", proficiency: 90, icon: "SiGit" },
+      { name: "Docker", category: "tools", proficiency: 70, icon: "SiDocker" },
+      { name: "Firebase", category: "tools", proficiency: 80, icon: "SiFirebase" },
     ];
     
     for (const skill of skillList) {
