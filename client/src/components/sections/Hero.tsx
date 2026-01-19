@@ -30,6 +30,9 @@ export function Hero() {
               Future Web
             </span>
           </h1>
+          <h2 className="text-2xl md:text-3xl font-display font-semibold mb-6 text-white">
+            I'm <span className="text-glow-white">Jethro Samson</span>
+          </h2>
           
           <p className="text-lg text-muted-foreground mb-8 max-w-xl leading-relaxed">
             I craft immersive, high-performance digital experiences using modern technologies. 

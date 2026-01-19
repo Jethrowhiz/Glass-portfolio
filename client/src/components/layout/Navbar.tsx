@@ -35,8 +35,8 @@ export function Navbar() {
             <div className="p-2 rounded-lg bg-cyan-500/10 border border-cyan-500/30 group-hover:bg-cyan-500/20 transition-colors">
               <Code2 className="w-6 h-6 text-cyan-400" />
             </div>
-            <span className="font-display font-bold text-xl tracking-tight text-white">
-              DEV<span className="text-cyan-400">.FOLIO</span>
+            <span className="font-display font-bold text-xl tracking-tight text-white uppercase">
+              Jethro<span className="text-cyan-400"> Samson</span>
             </span>
           </Link>
 

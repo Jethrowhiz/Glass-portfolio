@@ -38,9 +38,9 @@ export function Contact() {
 
             <div className="space-y-6">
               {[
-                { icon: Mail, text: "hello@devfolio.com", label: "Email" },
-                { icon: MapPin, text: "San Francisco, CA", label: "Location" },
-                { icon: Phone, text: "+1 (555) 000-0000", label: "Phone" },
+                { icon: Mail, text: "jethrosamson13@gmail.com", label: "Email" },
+                { icon: MapPin, text: "Taraba, Nigeria", label: "Location" },
+                { icon: Phone, text: "+234 9124294337", label: "Phone" },
               ].map((item, i) => (
                 <GlassCard key={i} className="flex items-center gap-4 p-4 hover:bg-white/5 transition-colors">
                   <div className="p-3 rounded-xl bg-cyan-500/10 border border-cyan-500/20 text-cyan-400">
