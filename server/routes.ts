@@ -12,7 +12,7 @@ async function seedDatabase() {
     await storage.createProject({
       title: "Portfolio Website",
       description: "A responsive portfolio website showcasing projects and skills with smooth animations and modern design principles.",
-      imageUrl: "https://images.unsplash.com/photo-1557821552-17105176677c?w=800&q=80",
+      imageUrl: "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=800&q=80",
       link: "https://github.com/Jethrowhiz/portfolio-website",
       tags: ["React", "Tailwind", "Framer Motion"],
       featured: true,
@@ -21,7 +21,7 @@ async function seedDatabase() {
     await storage.createProject({
       title: "My Portfolio (HTML)",
       description: "A classic portfolio design implemented using semantic HTML and CSS to demonstrate core web development skills.",
-      imageUrl: "https://images.unsplash.com/photo-1550745165-9bc0b252726f?w=800&q=80",
+      imageUrl: "https://images.unsplash.com/photo-1547658719-da2b51169166?w=800&q=80",
       link: "https://github.com/Jethrowhiz/My_portfolio",
       tags: ["HTML", "CSS"],
       featured: true,
@@ -30,9 +30,36 @@ async function seedDatabase() {
     await storage.createProject({
       title: "Clarity Smart Contracts",
       description: "Assignment repository for Clarity smart contracts, focusing on blockchain development and secure contract logic.",
-      imageUrl: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&q=80",
+      imageUrl: "https://images.unsplash.com/photo-1639762681485-074b7f938ba0?w=800&q=80",
       link: "https://github.com/Jethrowhiz/Clarity-Smart-Contract-Assignments",
       tags: ["Clarity", "Smart Contracts", "Blockchain"],
+      featured: false,
+    });
+
+    await storage.createProject({
+      title: "E-Commerce App",
+      description: "A full-stack e-commerce solution with product management, shopping cart, and secure checkout integration.",
+      imageUrl: "https://images.unsplash.com/photo-1557821552-17105176677c?w=800&q=80",
+      link: "https://github.com/Jethrowhiz",
+      tags: ["Node.js", "Express", "PostgreSQL"],
+      featured: true,
+    });
+
+    await storage.createProject({
+      title: "Task Management Tool",
+      description: "A collaborative task tracking application with real-time updates and team management features.",
+      imageUrl: "https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?w=800&q=80",
+      link: "https://github.com/Jethrowhiz",
+      tags: ["React", "Firebase", "Tailwind"],
+      featured: false,
+    });
+
+    await storage.createProject({
+      title: "Weather Dashboard",
+      description: "A dynamic weather application providing real-time forecasts and interactive climate data visualizations.",
+      imageUrl: "https://images.unsplash.com/photo-1592210454359-9043f067919b?w=800&q=80",
+      link: "https://github.com/Jethrowhiz",
+      tags: ["JavaScript", "API Integration", "Charts.js"],
       featured: false,
     });
   }

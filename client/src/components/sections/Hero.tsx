@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { NeonButton } from "../ui/NeonButton";
-import { ArrowRight, Github, Linkedin, Twitter } from "lucide-react";
+import { ArrowRight, Github, MessageCircle, Twitter } from "lucide-react";
 
 export function Hero() {
   const scrollToProjects = () => {
@@ -47,7 +47,7 @@ export function Hero() {
             <div className="flex items-center gap-4 px-6">
               {[
                 { Icon: Github, href: "https://github.com/Jethrowhiz" },
-                { Icon: Linkedin, href: "#" },
+                { Icon: MessageCircle, href: "https://wa.me/2349124294337" },
                 { Icon: Twitter, href: "https://x.com/LilwhizSJ" }
               ].map((social, i) => (
                 <a 
