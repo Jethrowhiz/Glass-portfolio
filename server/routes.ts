@@ -37,11 +37,11 @@ async function seedDatabase() {
     });
 
     await storage.createProject({
-      title: "Web3 Smart Contract App",
-      description: "A decentralized application featuring secure smart contract interactions, real-time blockchain data monitoring, and wallet integration.",
-      imageUrl: "https://images.unsplash.com/photo-1639762681057-32c9a2d57a44?w=800&q=80",
+      title: "Crypto Vault",
+      description: "An advanced Web3 investment application with secure asset storage, real-time portfolio tracking, and decentralized finance integrations.",
+      imageUrl: "https://images.unsplash.com/photo-1621416894569-0f39ed31d247?w=800&q=80",
       link: "https://github.com/Jethrowhiz",
-      tags: ["Solidity", "Ether.js", "Web3", "React"],
+      tags: ["Solidity", "Ether.js", "Web3", "React", "DeFi"],
       featured: true,
     });
 
