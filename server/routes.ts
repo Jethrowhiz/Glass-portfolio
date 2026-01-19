@@ -12,7 +12,7 @@ async function seedDatabase() {
     await storage.createProject({
       title: "Portfolio Website",
       description: "A responsive portfolio website showcasing projects and skills with smooth animations and modern design principles.",
-      imageUrl: "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=800&q=80",
+      imageUrl: "/assets/portfolio-site.webp",
       link: "https://github.com/Jethrowhiz/portfolio-website",
       tags: ["React", "Tailwind", "Framer Motion"],
       featured: true,
