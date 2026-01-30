@@ -10,7 +10,7 @@ export function Hero() {
   return (
     <section className="min-h-screen flex items-center justify-center relative px-4 pt-20 overflow-hidden">
       <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-12 items-center">
-        
+
         {/* Text Content */}
         <motion.div
           initial={{ opacity: 0, x: -50 }}
@@ -23,7 +23,7 @@ export function Hero() {
               Full Stack Developer
             </span>
           </div>
-          
+
           <h1 className="text-4xl sm:text-5xl md:text-7xl font-display font-bold leading-tight mb-6">
             Building the <br />
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500 text-glow">
@@ -33,26 +33,26 @@ export function Hero() {
           <h2 className="text-xl sm:text-2xl md:text-3xl font-display font-semibold mb-6 text-white">
             I'm <span className="text-glow-white">Jethro Samson</span>
           </h2>
-          
+
           <p className="text-base sm:text-lg text-muted-foreground mb-8 max-w-xl leading-relaxed">
-            I craft immersive, high-performance digital experiences using modern technologies. 
+            I craft immersive, high-performance digital experiences using modern technologies.
             Specializing in React, Node.js, and creative frontend engineering.
           </p>
-          
+
           <div className="flex flex-col sm:flex-row gap-4 mb-12 items-center sm:items-start">
             <NeonButton onClick={scrollToProjects} className="w-full sm:w-auto">
               View Projects <ArrowRight className="w-4 h-4" />
             </NeonButton>
-            
+
             <div className="flex items-center gap-4 px-0 sm:px-6">
               {[
                 { Icon: Github, href: "https://github.com/Jethrowhiz" },
                 { Icon: MessageCircle, href: "https://wa.me/2349124294337" },
                 { Icon: Twitter, href: "https://x.com/LilwhizSJ" }
               ].map((social, i) => (
-                <a 
-                  key={i} 
-                  href={social.href} 
+                <a
+                  key={i}
+                  href={social.href}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="p-2 rounded-full border border-white/10 hover:border-cyan-500/50 hover:bg-cyan-500/10 hover:text-cyan-400 transition-all text-muted-foreground"
@@ -76,13 +76,13 @@ export function Hero() {
             <div className="absolute inset-0 border border-cyan-500/20 rounded-full animate-[spin_10s_linear_infinite]" />
             <div className="absolute inset-8 border border-fuchsia-500/20 rounded-full animate-[spin_15s_linear_infinite_reverse]" />
             <div className="absolute inset-16 border border-purple-500/20 rounded-full animate-[spin_20s_linear_infinite]" />
-            
+
             {/* Center Image/Card */}
             <div className="absolute inset-0 flex items-center justify-center">
               <div className="relative w-64 h-64 rounded-full overflow-hidden border-2 glass border-glow-white shadow-[0_0_50px_rgba(255,255,255,0.2)]">
                 {/* Developer Avatar */}
-                <img 
-                  src="/assets/profile.jpg" 
+                <img
+                  src="/assets/profile.jpeg"
                   alt="Developer"
                   className="w-full h-full object-cover"
                 />
@@ -90,15 +90,15 @@ export function Hero() {
             </div>
 
             {/* Floating badges */}
-            <motion.div 
+            <motion.div
               animate={{ y: [-10, 10, -10] }}
               transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
               className="absolute top-10 right-0 glass px-4 py-2 rounded-xl border border-cyan-500/30 text-cyan-400 text-sm font-bold shadow-lg"
             >
               React Expert
             </motion.div>
-            
-            <motion.div 
+
+            <motion.div
               animate={{ y: [10, -10, 10] }}
               transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
               className="absolute bottom-20 left-0 glass px-4 py-2 rounded-xl border border-fuchsia-500/30 text-fuchsia-400 text-sm font-bold shadow-lg"
