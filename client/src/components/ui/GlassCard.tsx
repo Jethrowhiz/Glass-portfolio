@@ -2,16 +2,17 @@ import { motion, HTMLMotionProps } from "framer-motion";
 import { cn } from "@/lib/utils";
 
 interface GlassCardProps extends HTMLMotionProps<"div"> {
+  children: React.ReactNode;
   hoverEffect?: boolean;
   glow?: "cyan" | "magenta" | "none";
 }
 
-export function GlassCard({ 
-  className, 
-  children, 
-  hoverEffect = false, 
+export function GlassCard({
+  className,
+  children,
+  hoverEffect = false,
   glow = "none",
-  ...props 
+  ...props
 }: GlassCardProps) {
   return (
     <motion.div
@@ -30,7 +31,7 @@ export function GlassCard({
     >
       {/* Glossy sheen overlay */}
       <div className="absolute inset-0 bg-gradient-to-br from-white/[0.05] to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
-      
+
       {/* Content */}
       <div className="relative z-10">
         {children}

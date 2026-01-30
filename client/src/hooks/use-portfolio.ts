@@ -1,29 +1,71 @@
 import { useQuery, useMutation } from "@tanstack/react-query";
-import { api, buildUrl } from "@shared/routes";
-import { useToast } from "@/hooks/use-toast";
 import { type InsertContactMessage } from "@shared/schema";
+import { useToast } from "@/hooks/use-toast";
+
+// Static Data
+const PROJECTS = [
+  {
+    id: 1,
+    title: "E-Commerce Platform",
+    description: "A full-featured online store with cart, checkout, and admin dashboard.",
+    imageUrl: "https://images.unsplash.com/photo-1557821552-17105176677c?w=800&q=80",
+    link: "#",
+    tags: ["React", "Node.js", "PostgreSQL"],
+    featured: true,
+    createdAt: new Date("2024-01-15"),
+  },
+  {
+    id: 2,
+    title: "Task Management App",
+    description: "Collaborative task manager with real-time updates.",
+    imageUrl: "https://images.unsplash.com/photo-1540350394557-8d14678e7f91?w=800&q=80",
+    link: "#",
+    tags: ["Vue", "Firebase", "Tailwind"],
+    featured: false,
+    createdAt: new Date("2023-11-20"),
+  },
+  {
+    id: 3,
+    title: "Portfolio Website",
+    description: "A modern, glassmorphism-styled portfolio website.",
+    imageUrl: "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=800&q=80",
+    link: "#",
+    tags: ["React", "TypeScript", "Vite"],
+    featured: true,
+    createdAt: new Date("2024-02-01"),
+  }
+];
+
+
+const SKILLS = [
+  { id: 1, name: "React", category: "frontend", proficiency: 95, icon: "SiReact" },
+  { id: 2, name: "TypeScript", category: "frontend", proficiency: 90, icon: "SiTypescript" },
+  { id: 3, name: "Node.js", category: "backend", proficiency: 85, icon: "SiNodedotjs" },
+  { id: 4, name: "Python", category: "backend", proficiency: 80, icon: "SiPython" },
+  { id: 5, name: "PostgreSQL", category: "backend", proficiency: 75, icon: "SiPostgresql" },
+  { id: 6, name: "Git", category: "tools", proficiency: 90, icon: "SiGit" },
+  { id: 7, name: "Docker", category: "tools", proficiency: 70, icon: "SiDocker" },
+  { id: 8, name: "Figma", category: "tools", proficiency: 85, icon: "SiFigma" }
+];
 
 // Projects Hooks
 export function useProjects() {
   return useQuery({
-    queryKey: [api.projects.list.path],
+    queryKey: ["projects"],
     queryFn: async () => {
-      const res = await fetch(api.projects.list.path);
-      if (!res.ok) throw new Error("Failed to fetch projects");
-      return api.projects.list.responses[200].parse(await res.json());
+      // Simulate network delay
+      await new Promise(resolve => setTimeout(resolve, 500));
+      return PROJECTS;
     },
   });
 }
 
 export function useProject(id: number) {
   return useQuery({
-    queryKey: [api.projects.get.path, id],
+    queryKey: ["project", id],
     queryFn: async () => {
-      const url = buildUrl(api.projects.get.path, { id });
-      const res = await fetch(url);
-      if (res.status === 404) return null;
-      if (!res.ok) throw new Error("Failed to fetch project");
-      return api.projects.get.responses[200].parse(await res.json());
+      await new Promise(resolve => setTimeout(resolve, 300));
+      return PROJECTS.find(p => p.id === id) || null;
     },
     enabled: !!id,
   });
@@ -32,11 +74,10 @@ export function useProject(id: number) {
 // Skills Hooks
 export function useSkills() {
   return useQuery({
-    queryKey: [api.skills.list.path],
+    queryKey: ["skills"],
     queryFn: async () => {
-      const res = await fetch(api.skills.list.path);
-      if (!res.ok) throw new Error("Failed to fetch skills");
-      return api.skills.list.responses[200].parse(await res.json());
+      await new Promise(resolve => setTimeout(resolve, 500));
+      return SKILLS;
     },
   });
 }
@@ -44,24 +85,13 @@ export function useSkills() {
 // Contact Hook
 export function useContactMutation() {
   const { toast } = useToast();
-  
+
   return useMutation({
     mutationFn: async (data: InsertContactMessage) => {
-      const validated = api.contact.submit.input.parse(data);
-      const res = await fetch(api.contact.submit.path, {
-        method: api.contact.submit.method,
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(validated),
-      });
-
-      if (!res.ok) {
-        if (res.status === 400) {
-          const error = api.contact.submit.responses[400].parse(await res.json());
-          throw new Error(error.message);
-        }
-        throw new Error("Failed to send message");
-      }
-      return api.contact.submit.responses[201].parse(await res.json());
+      // Simulate network request
+      await new Promise(resolve => setTimeout(resolve, 1000));
+      console.log("Contact form submitted:", data);
+      return { success: true };
     },
     onSuccess: () => {
       toast({
@@ -74,7 +104,7 @@ export function useContactMutation() {
     onError: (error) => {
       toast({
         title: "Error",
-        description: error.message,
+        description: error.message || "Something went wrong",
         variant: "destructive",
       });
     },

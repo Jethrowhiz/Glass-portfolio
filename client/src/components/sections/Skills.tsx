@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import { Code, Database, Wrench } from "lucide-react";
 
 export function Skills() {
-  const { data: skills, isLoading } = useSkills();
+  const { data: skills, isPending } = useSkills();
 
   const categories = [
     { id: 'frontend', label: 'Frontend', icon: Code, color: 'text-cyan-400' },
@@ -12,7 +12,7 @@ export function Skills() {
     { id: 'tools', label: 'Tools', icon: Wrench, color: 'text-purple-400' },
   ];
 
-  if (isLoading) return null;
+  if (isPending) return null;
 
   return (
     <section id="skills" className="py-24 relative">
@@ -29,10 +29,10 @@ export function Skills() {
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
           {categories.map((cat) => {
             const categorySkills = skills?.filter(s => s.category === cat.id) || [];
-            
+
             return (
-              <GlassCard 
-                key={cat.id} 
+              <GlassCard
+                key={cat.id}
                 className="h-full flex flex-col"
                 glow={cat.id === 'frontend' ? 'cyan' : cat.id === 'backend' ? 'magenta' : 'none'}
               >
@@ -57,10 +57,9 @@ export function Skills() {
                           initial={{ width: 0 }}
                           whileInView={{ width: `${skill.proficiency}%` }}
                           transition={{ duration: 1, ease: "easeOut" }}
-                          className={`h-full rounded-full ${
-                            cat.id === 'frontend' ? 'bg-cyan-500' : 
-                            cat.id === 'backend' ? 'bg-fuchsia-500' : 'bg-purple-500'
-                          } opacity-80 group-hover:opacity-100 group-hover:shadow-[0_0_10px_currentColor] transition-all`}
+                          className={`h-full rounded-full ${cat.id === 'frontend' ? 'bg-cyan-500' :
+                              cat.id === 'backend' ? 'bg-fuchsia-500' : 'bg-purple-500'
+                            } opacity-80 group-hover:opacity-100 group-hover:shadow-[0_0_10px_currentColor] transition-all`}
                         />
                       </div>
                     </div>

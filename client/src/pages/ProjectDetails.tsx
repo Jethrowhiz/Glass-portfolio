@@ -10,9 +10,9 @@ import { motion } from "framer-motion";
 export default function ProjectDetails() {
   const [match, params] = useRoute("/project/:id");
   const id = params ? parseInt(params.id) : 0;
-  const { data: project, isLoading } = useProject(id);
+  const { data: project, isPending } = useProject(id);
 
-  if (isLoading) {
+  if (isPending) {
     return (
       <div className="min-h-screen bg-[#050511] flex items-center justify-center">
         <div className="animate-spin w-8 h-8 border-2 border-cyan-500 border-t-transparent rounded-full" />
@@ -38,7 +38,7 @@ export default function ProjectDetails() {
 
       <main className="pt-32 pb-24 px-4">
         <div className="max-w-4xl mx-auto">
-          
+
           <Link href="/#projects" className="inline-flex items-center gap-2 text-muted-foreground hover:text-cyan-400 mb-8 transition-colors">
             <ArrowLeft className="w-4 h-4" /> Back to Projects
           </Link>
@@ -50,8 +50,8 @@ export default function ProjectDetails() {
           >
             <div className="relative aspect-video w-full rounded-2xl overflow-hidden mb-12 border border-white/10 shadow-2xl">
               <div className="absolute inset-0 bg-gradient-to-t from-[#050511] to-transparent opacity-40" />
-              <img 
-                src={project.imageUrl} 
+              <img
+                src={project.imageUrl}
                 alt={project.title}
                 className="w-full h-full object-cover"
               />
@@ -70,12 +70,12 @@ export default function ProjectDetails() {
                   <h3 className="text-xl font-bold font-display text-white">Project Overview</h3>
                   <div className="prose prose-invert prose-p:text-gray-400 max-w-none">
                     <p>
-                      This project demonstrates advanced implementation of modern web technologies. 
-                      Designed with scalability and performance in mind, it solves key user problems 
+                      This project demonstrates advanced implementation of modern web technologies.
+                      Designed with scalability and performance in mind, it solves key user problems
                       while providing a delightful user experience.
                     </p>
                     <p>
-                      Key challenges included real-time data synchronization and creating performant 
+                      Key challenges included real-time data synchronization and creating performant
                       animations on mobile devices.
                     </p>
                   </div>
@@ -108,9 +108,9 @@ export default function ProjectDetails() {
                     </p>
                   </div>
 
-                  <a 
-                    href={project.link} 
-                    target="_blank" 
+                  <a
+                    href={project.link}
+                    target="_blank"
                     rel="noopener noreferrer"
                     className="block"
                   >

@@ -1,16 +1,16 @@
-import { ButtonHTMLAttributes } from "react";
+import { motion, HTMLMotionProps } from "framer-motion";
 import { cn } from "@/lib/utils";
-import { motion } from "framer-motion";
 
-interface NeonButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
+interface NeonButtonProps extends HTMLMotionProps<"button"> {
+  children?: React.ReactNode;
   variant?: "cyan" | "magenta";
 }
 
-export function NeonButton({ 
-  children, 
-  className, 
-  variant = "cyan", 
-  ...props 
+export function NeonButton({
+  children,
+  className,
+  variant = "cyan",
+  ...props
 }: NeonButtonProps) {
   const colorClass = variant === "cyan" ? "cyan" : "fuchsia";
   const hexColor = variant === "cyan" ? "#00f3ff" : "#d946ef";

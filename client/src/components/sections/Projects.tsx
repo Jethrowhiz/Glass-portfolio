@@ -5,9 +5,9 @@ import { ExternalLink, ArrowRight } from "lucide-react";
 import { motion } from "framer-motion";
 
 export function Projects() {
-  const { data: projects, isLoading } = useProjects();
+  const { data: projects, isPending } = useProjects();
 
-  if (isLoading) {
+  if (isPending) {
     return (
       <div className="py-24 text-center">
         <div className="animate-spin w-8 h-8 border-2 border-cyan-500 border-t-transparent rounded-full mx-auto" />
@@ -35,15 +35,15 @@ export function Projects() {
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
           {projects?.map((project, idx) => (
             <Link key={project.id} href={`/project/${project.id}`} className="block h-full">
-              <GlassCard 
-                hoverEffect 
+              <GlassCard
+                hoverEffect
                 className="h-full flex flex-col p-0 group"
                 glow={idx % 2 === 0 ? "cyan" : "magenta"}
               >
                 <div className="relative h-48 overflow-hidden border-b border-white/5">
                   <div className="absolute inset-0 bg-gradient-to-t from-[#050511] to-transparent opacity-60 z-10" />
-                  <img 
-                    src={project.imageUrl} 
+                  <img
+                    src={project.imageUrl}
                     alt={project.title}
                     loading="lazy"
                     className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700 ease-out"
@@ -67,7 +67,7 @@ export function Projects() {
                   <h3 className="text-xl font-bold font-display mb-2 group-hover:text-cyan-400 transition-colors">
                     {project.title}
                   </h3>
-                  
+
                   <p className="text-sm text-muted-foreground line-clamp-3 mb-6 flex-grow">
                     {project.description}
                   </p>
